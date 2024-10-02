@@ -19,13 +19,19 @@ class CartScreen extends StatelessWidget {
         padding: const EdgeInsets.all(16.0),
         child: Selector<ProductDetailsProvider, List<FoodModel>>(
           selector: (p0, p1) => p1.cartItems,
-          builder: (context, cartItems, child) => ListView.separated(
-              itemBuilder: (context, index) {
-                FoodModel foodModel = cartItems[index];
-                return CartProductWidget(foodModel: foodModel);
-              },
-              separatorBuilder: (context, index) => const SizeBoxH(8),
-              itemCount: cartItems.length),
+          builder: (context, cartItems, child) => cartItems.isNotEmpty
+              ? ListView.separated(
+                  itemBuilder: (context, index) {
+                    FoodModel foodModel = cartItems[index];
+                    return CartProductWidget(foodModel: foodModel);
+                  },
+                  separatorBuilder: (context, index) => const SizeBoxH(8),
+                  itemCount: cartItems.length)
+              : Center(
+                  child: Image.asset(
+                  AppConstants.appNoDataImg,
+                  height: Responsive.height * 30,
+                )),
         ),
       ),
     );

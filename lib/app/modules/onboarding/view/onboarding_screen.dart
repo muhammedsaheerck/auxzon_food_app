@@ -114,9 +114,8 @@ class OnboardingScreen extends StatelessWidget {
                       const SizeBoxH(40),
                       ElevatedButton(
                         onPressed: () {
-                          Routes.push(
+                          Routes.pushRemoveUntil(
                             context: context,
-                            exit: () {},
                             screen: const BottomNavigationBarScreen(),
                           );
                         },

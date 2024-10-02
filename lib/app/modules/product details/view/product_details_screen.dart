@@ -240,7 +240,7 @@ class ProductDetailsScreen extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                       color: AppConstants.appPrimaryColor),
                 ),
-                SizeBoxH(Responsive.height * 4),
+                SizeBoxH(Responsive.height * 2),
                 Align(
                   alignment: Alignment.center,
                   child: ElevatedButton(
@@ -265,7 +265,7 @@ class ProductDetailsScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizeBoxH(8)
+                const SizeBoxH(15)
               ],
             ),
           ),

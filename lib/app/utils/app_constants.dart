@@ -15,4 +15,5 @@ class AppConstants {
   static const String appOnboardOne = 'assets/images/image-3.jpg';
   static const String appHomeBanner =
       'assets/images/image-5-removebg-preview.png';
+  static const String appNoDataImg = "assets/images/groceryNoData.png";
 }
