@@ -24,7 +24,7 @@ class ProductDetailsProvider extends ChangeNotifier {
       cartItems.add(item);
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
-          backgroundColor: AppConstants.appPrimaryColor,
+          backgroundColor: Colors.green,
           duration: Duration(seconds: 5),
           content: Text(
             'Product added to cart',
